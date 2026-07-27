@@ -31,6 +31,6 @@ File Management{
 
 }
 
-config{ 
+config{
     git config --global user.email (configure github account with local machine)
 }
