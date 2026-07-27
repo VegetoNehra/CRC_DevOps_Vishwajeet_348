@@ -1,0 +1,35 @@
+LINUX :
+General Commands{
+1.cd- change Directory
+ cd relative_path
+2.cd .
+  Visit Previous Directory
+3.cd /
+4. whoami
+  Gives Username of Current user
+5. sudo
+   provide amdin access
+6.apt install
+  used to install a new program/package
+}
+File Management{
+1.touch
+ create an empty file
+ used to update access time/ modified time
+2.stat
+ used ot display/fetch access/modified time
+3.ls
+ list out all files in directory
+4.ls -a
+ list all except hidden files
+5.ll
+ list all files of current directory in long lit with metadata
+6.Cat
+ display the data of the file
+ also used to create  a file in editable mode(cat > filename to open in editable)(ctrl+d to gian acess in readmode)
+ used to copy the content of first file to second
+
+}
+Directory Management
+Process Management
+User Management
