@@ -30,6 +30,7 @@ File Management{
  used to copy the content of first file to second
 
 }
-Directory Management
-Process Management
-User Management
+
+config{ 
+    git config --global user.email (configure github account with local machine)
+}
