@@ -1,46 +1,172 @@
-LINUX :
-General Commands{
-1.cd- change Directory
- cd relative_path
-2.cd .
-  Visit Previous Directory
-3.cd /
-4. whoami
-  Gives Username of Current user
-5. sudo
-   provide amdin access
-6.apt install
-  used to install a new program/package
-}
-File Management{
-1.touch
- create an empty file
- used to update access time/ modified time
-2.stat
- used ot display/fetch access/modified time
-3.ls
- list out all files in directory
-4.ls -a
- list all except hidden files
-5.ll
- list all files of current directory in long lit with metadata
-6.Cat
- display the data of the file
- also used to create  a file in editable mode(cat > filename to open in editable)(ctrl+d to gian acess in readmode)
- used to copy the content of first file to second
+LINUX
+=====
 
-}
+General Commands
+----------------
+1. cd <directory>
+   - Change current directory to <directory>.
+   - Example: `cd /home/user/Documents`
+2. cd ..
+   - Move to the parent directory.
+3. cd /
+   - Go to the root directory.
+4. cd ~
+   - Go to the home directory.
+5. pwd
+   - Print the current working directory.
+6. whoami
+   - Show the current logged-in username.
+7. sudo <command>
+   - Run a command with administrative privileges.
+   - Example: `sudo apt install package-name`
+8. apt install <package>
+   - Install a package on Debian/Ubuntu systems.
+   - Example: `sudo apt install git`
+9. apt update
+   - Refresh the package list.
+10. apt upgrade
+    - Upgrade installed packages to the latest available versions.
 
-config{
-    git config --global user.email (configure github account with local machine)
-}
-{
-    1. git  init ( used ot initialize or to make local directory into a repo i.e git compatible via adding .git file)
-    2.git clone "url" ( cloning github repo)
-    3.git status (to track all the staged/modified files to be commited)
-    4.staged file (ready to upload ot github)
-    5.git add <file> (used to stage all edited files)
-    6.git restore <file> (to restore to last commit)
-    7.git commit -m "message" (to create a checkpoint)
-    8. git push (push staged file to github repo)
-}
+File Management
+---------------
+1. touch <file>
+   - Create an empty file or update a file's timestamp.
+2. stat <file>
+   - Display file metadata, including access and modification times.
+3. ls
+   - List files and directories in the current folder.
+4. ls -a
+   - List all files, including hidden files beginning with `.`.
+5. ls -l
+   - Show file details in long format (permissions, owner, size, date).
+6. ls -la
+   - Show all files with detailed listing.
+7. cat <file>
+   - Display file contents.
+8. cat <source> > <destination>
+   - Redirect content from one file to create or overwrite another file.
+9. cp <source> <destination>
+   - Copy a file or directory.
+10. mv <source> <destination>
+    - Move or rename a file or directory.
+11. rm <file>
+    - Remove a file.
+12. rm -r <directory>
+    - Remove a directory and its contents recursively.
+13. rm -rf <path>
+    - Force remove files or directories without prompts.
+    - Use with extreme care: `rm -rf /path/to/folder`
+14. chmod <mode> <file>
+    - Change file or directory permissions.
+    - Example: `chmod 755 script.sh`
+15. chown <user>:<group> <file>
+    - Change file or directory owner and group.
+    - Example: `sudo chown user:group file.txt`
+16. find <path> -name "pattern"
+    - Search for files or directories matching a name pattern.
+    - Example: `find . -name "*.log"`
+17. grep "pattern" <file>
+    - Search for text inside a file.
+    - Example: `grep "error" /var/log/syslog`
+18. head <file>
+    - Show the first 10 lines of a file.
+19. tail <file>
+    - Show the last 10 lines of a file.
+20. tail -f <file>
+    - Follow a file as it grows (useful for log files).
+
+Directory Management
+--------------------
+1. pwd
+   - Print the full current working directory.
+2. cd <directory>
+   - Change current directory to <directory>.
+   - Example: `cd /home/user/Documents`
+3. cd ..
+   - Move to the parent directory.
+4. cd /
+   - Go to the root directory.
+5. cd ~
+   - Go to the home directory.
+6. cd -
+   - Return to the previous directory.
+7. ls
+   - List files and directories in the current folder.
+8. ls -a
+   - List all files, including hidden files.
+9. ls -l
+   - List files with detailed metadata.
+10. ls -la
+    - List all files with details.
+11. mkdir <directory>
+    - Create a new directory.
+12. mkdir -p <path>
+    - Create nested directories as needed.
+    - Example: `mkdir -p /tmp/project/src`
+13. rmdir <directory>
+    - Remove an empty directory.
+14. tree [path]
+    - Display a directory tree structure.
+    - Example: `tree .`
+15. du -sh <path>
+    - Show the disk usage of a directory in human-readable form.
+16. df -h
+    - Show available disk space on mounted file systems.
+17. pushd <directory>
+    - Save current directory and switch to another.
+18. popd
+    - Return to the directory saved by `pushd`.
+19. ln -s <target> <linkname>
+    - Create a symbolic link.
+    - Example: `ln -s /var/www/html ~/html-link`
+20. basename <path>
+    - Print the final component of a path.
+21. dirname <path>
+    - Print the directory portion of a path.
+
+23. nano <file>
+    - Edit a file in the Nano editor.
+24. vi <file> or vim <file>
+    - Edit a file in Vi/Vim.
+    - Normal mode commands:
+      - `dd` delete line
+      - `yy` copy line
+      - `p` paste
+      - `u` undo
+      - `/<text>` search for text
+    - Insert mode entry: `i`, `a`, or `o`
+    - Exit insert mode: `Esc`
+    - Save: `:w`
+    - Save and quit: `:wq` or `ZZ`
+
+Git Basics
+----------
+1. git config --global user.name "Your Name"
+   - Set your Git username globally.
+2. git config --global user.email "you@example.com"
+   - Set your Git email globally.
+3. git init
+   - Initialize a local Git repository.
+4. git clone <url>
+   - Clone a remote repository to local.
+5. git status
+   - Show unstaged and staged changes and branch status.
+6. git add <file>
+   - Stage a file for commit.
+7. git add .
+   - Stage all changes in the current directory.
+8. git restore <file>
+   - Discard local changes and restore a file from the last commit.
+9. git commit -m "message"
+   - Commit staged changes with a message.
+10. git push
+    - Push commits to the remote repository.
+11. git pull
+    - Fetch and merge updates from the remote repository.
+
+Notes
+-----
+- Hidden files begin with `.` and are not listed by default.
+- Use `sudo` only when a command needs root privileges.
+- In Vim, press `Esc` before entering `:w` or `:q`.
+- Configure Git user name and email before making your first commit.
