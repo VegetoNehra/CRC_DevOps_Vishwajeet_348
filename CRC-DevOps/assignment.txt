@@ -1,0 +1,6 @@
+1.Create a directory name as CRC-DevOps in Which ,create 2 files named as :-
+    assignment.txt
+    commandList.txt
+2.Access these files to modify/add the relevant content
+3.learn commands
+4. What is the difference between git clone or git remote add?
