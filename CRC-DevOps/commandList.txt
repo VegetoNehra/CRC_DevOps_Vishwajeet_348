@@ -47,9 +47,17 @@ File Management
    - Redirect content from one file to create or overwrite another file.
 9. cp <source> <destination>
    - Copy a file or directory.
-10. mv <source> <destination>
+10. cp -r <source> <destination>
+    - Copy a directory and its contents recursively.
+11. cp -i <source> <destination>
+    - Prompt before overwriting an existing file.
+12. mv <source> <destination>
     - Move or rename a file or directory.
-11. rm <file>
+13. mv -i <source> <destination>
+    - Prompt before overwriting an existing file during move.
+14. mv -f <source> <destination>
+    - Force move without prompts.
+15. rm <file>
     - Remove a file.
 12. rm -r <directory>
     - Remove a directory and its contents recursively.
