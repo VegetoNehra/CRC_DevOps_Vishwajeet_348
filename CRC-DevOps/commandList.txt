@@ -146,6 +146,7 @@ Directory Management
     - Exit insert mode: `Esc`
     - Save: `:w`
     - Save and quit: `:wq` or `ZZ`
+ 
 
 Git Basics
 ----------
