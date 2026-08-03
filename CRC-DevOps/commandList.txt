@@ -207,6 +207,35 @@ Git SSH Authentication
 12. git push origin main
     - Push to the remote repository using SSH authentication.
 
+Git History and Comparison
+--------------------------
+1. git log
+   - Show the commit history of the current branch.
+2. git log --oneline
+   - Show a short one-line summary of each commit.
+3. git log --decorate --graph --oneline --all
+   - Show a visual history of commits and branches.
+4. git reflog
+   - Show the recent local history of HEAD movements and recovery points.
+5. git diff
+   - Show changes between the working directory and the last commit.
+6. git diff --staged
+   - Show changes that are staged but not yet committed.
+7. git diff HEAD~1 HEAD
+   - Compare the current commit with the previous commit.
+8. git show <commit-id>
+   - Display the details of a specific commit.
+9. git blame <file>
+   - Show who last changed each line in a file.
+10. git checkout <commit-id>
+    - Switch to a specific commit (use with care).
+11. git revert <commit-id>
+    - Create a new commit that undoes the changes from an older commit.
+12. git reset --soft HEAD~1
+    - Undo the last commit while keeping changes staged.
+13. git reset --hard HEAD~1
+    - Remove the last commit and all its changes permanently.
+
 Notes
 -----
 - Hidden files begin with `.` and are not listed by default.
