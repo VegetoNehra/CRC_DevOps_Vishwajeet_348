@@ -172,6 +172,15 @@ Git Basics
     - Push commits to the remote repository.
 11. git pull
     - Fetch and merge updates from the remote repository.
+12. git push --delete origin <branch>
+    - Delete a remote branch from the origin remote.
+    - Example: `git push --delete origin feature/login`
+13. git push origin --force
+    - Force push local branch changes to origin, overwriting remote history.
+    - Example: `git push origin --force`
+14. git branch -D <branch>
+    - Force delete a local branch even if it has unmerged changes.
+    - Example: `git branch -D feature/login`
 
 Git SSH Authentication
 ----------------------
